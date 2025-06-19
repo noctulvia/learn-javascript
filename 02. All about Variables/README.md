@@ -16,5 +16,8 @@
 2. const 声明的数组, 对象的元素可以修改
 3. 声明块级作用域常量
 
-# 2. Variable Naming Rules
+# 2. Hoisting
 
+# 3. Variable Naming Rules
+
+# 4. Variable Scopes
