@@ -1,7 +1,4 @@
-HTML <script></script>
-
-JavaScript .js
-
-Browser DevTools
-
-REPL: `node`
+1. HTML: <script></script>
+2. JavaScript: .js
+3. Browser -> DevTools -> Console Tab
+4. REPL: `node`
