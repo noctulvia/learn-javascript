@@ -366,3 +366,51 @@ let jsonString = '{"name":"张三"}';
 ```
 
 # 4. Variable Scopes
+
+在 JavaScript 中，**作用域 (Scope)** 决定了变量在程序的哪些位置可被访问。以下内容仅涵盖三种基本作用域：**全局作用域**、**函数作用域**和**块级作用域**。
+
+## 4.1 全局作用域 (Global Scope)
+
+全局作用域是代码在脚本最外层执行时的默认作用域。
+
+- 定义位置：在任何函数或代码块外部声明的变量。
+- 访问方式：全局变量在任意位置均可访问。
+
+## 4.2 函数作用域 (Function Scope)
+
+函数作用域指变量在函数内部定义，只在该函数内部可访问。
+
+- var 声明：具有函数作用域，即便在代码块中声明，也会提升到函数顶部。
+- 生命周期：函数执行时创建，执行结束后销毁。
+
+示例：
+
+```js
+function demo() {
+  var x = 5;
+  console.log(x);
+}
+demo(); // 5
+console.log(x); // ReferenceError: x is not defined
+```
+
+## 4.3 块级作用域 (Block Scope)
+
+块级作用域基于代码块 `{}`，仅对 `let` 和 `const` 有效，`var` 不受块级作用域限制。
+
+- 定义方式：使用 `let` 或 `const` 在 `{}` 内声明。
+- 访问范围：只在声明的块级内部可访问。
+
+示例：
+
+```js
+{
+  let x = 1; // 块级作用域
+  const y = 2; // 块级作用域
+  var z = 3; // 不受块级作用域限制
+  console.log(x, y, z); // 1 2 3
+}
+console.log(x); // ReferenceError: y is not defined
+console.log(y); // ReferenceError: x is not defined
+console.log(z); // 3
+```
